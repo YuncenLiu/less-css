@@ -1,0 +1,37 @@
+.center1() {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    background-color: skyblue;
+}
+
+.center2(@w:10px,@h:10px,@c) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: @h;
+    width: @w;;
+    background-color: @c;
+}
+
+#wrap {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border: 1px solid;
+    margin: 0 auto;
+    .inner1 {
+        .center1()
+    }
+    .inner2 {
+        .center2(100px,100px,pink)
+    }
+}

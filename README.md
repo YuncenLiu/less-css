@@ -18,3 +18,77 @@ VSCode Easy LESS`v2.0.0`
 
 #### 变量
 
+使用 @ 来申明一个变量、属性名、值
+
+```less
+@color:pink;
+@m:padding;
+@selector:#wrap;
+
+@{selector} {
+	@{m}: 0;
+	background-color: @color;
+}
+```
+
+变量的延迟加载
+
+```less
+@var: 0;
+.class {
+    @var: 1;
+    .barss {
+        @var: 2;
+        three: @var;
+        @var: 3;
+    }
+    one: @var;
+}
+```
+
+转化后会变成
+
+```css
+.class {
+  one: 1;
+}
+.class .barss {
+  three: 3;
+}
+```
+
+#### 嵌套规则
+
+1. 基本嵌套规则
+2.  `&` 嵌套规则 平级，删除空格
+
+
+#### 混合
+
+混合就是讲一系列属性从一个规则集引入到另外一个规则集
+
+1. 普通混合：混合的内容会加到原生CSS中
+	```less
+	.center {}
+	#wrap { .center}
+	```
+2. 不带输出混合：不会加到原生css中
+	```less
+	.center() {}
+	#wrap { .center}
+	```
+3. 带参数混合
+	```css
+	.center(@w,@h) { width:@w; height:@h }
+	#wrap { .center(100px,100px) }
+	```
+4. 带默认值的混合
+	```css
+	.center(@w:10px,@h:10px) { width:@w; height:@h }
+	#wrap { .center(100px,100px) }
+```
+5. 匹配模式
+	```css
+	.center(@w,@h) { width:@w; height:@h }
+	#wrap { .center(@w:100px,@h:100px) }
+```
