@@ -1,0 +1,24 @@
+@import './mixin/center-extend.less';
+
+#wrap {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 1px solid;
+    margin: 0 auto;
+
+    .inner{
+       
+        &:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            background: gray;
+        }
+        &:nth-child(2) {
+            width: 50px;
+            height: 50px;
+            background: yellow;
+        }
+        &:extend(centerex);
+    }
+}

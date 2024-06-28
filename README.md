@@ -103,4 +103,29 @@ VSCode Easy LESS`v2.0.0`
 	    .border(1px,solid,black);
 	}
 	```
-	
+
+
+#### 计算
+
+```less
+#wrap .sjx {
+    width:(100 + 100px)
+}
+```
+
+#### 继承
+
+2024-06-28 Mac VsCode 不知道是环境还是版本问题，继承没有编译成功
+
+```less
+&:extend(centerex);
+```
+
+#### 避免编译
+
+```less
+* {
+    padding: 0;
+    margin: ~"calc(100px+100)";
+}
+```
