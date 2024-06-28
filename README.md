@@ -92,3 +92,15 @@ VSCode Easy LESS`v2.0.0`
 	.center(@w,@h) { width:@w; height:@h }
 	#wrap { .center(@w:100px,@h:100px) }
 ```
+		也可以使用 `@import './triangle.less';` 引入其他 less 混入（函数）
+6. arguments变量
+	```css
+	.border(@1,@2,@3){
+	    border: @arguments;
+	}
+	
+	#wrap > .sjx{
+	    .border(1px,solid,black);
+	}
+	```
+	

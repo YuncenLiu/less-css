@@ -1,0 +1,5 @@
+#wrap > .sjx {
+  border-width: 80px;
+  border-style: dashed solid dashed solid;
+  border-color: transparent transparent transparent yellow;
+}
