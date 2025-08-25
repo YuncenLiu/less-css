@@ -1,6 +1,6 @@
-### less
+# study-less-2024
 
-less 是一种动态样式语言，属于CSS预处理器的范围，它扩展了css 语言，它扩展了 css 语言，增加了变量，minx，函数等特性，使css更易维护和扩展
+于 2024年 在B站学习，less 是一种动态样式语言，属于CSS预处理器的范围，它扩展了css 语言，它扩展了 css 语言，增加了变量，minx，函数等特性，使css更易维护和扩展
 
 [less 中文官网](https://lesscss.cn/)
 
